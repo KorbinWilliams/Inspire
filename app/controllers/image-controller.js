@@ -2,8 +2,8 @@ import ImageService from "../services/image-service.js";
 import store from "../store.js";
 
 function _drawImage() {
-  // TODO document.getElementById("bg-image").style.setProperty("background-image", "url('${this.???}')")
-  // change {this.???} to this.prop
+  let image = store.State.image.url;
+  document.body.style.backgroundImage = `url('${image}')`;
 }
 
 export default class ImageController {
@@ -22,3 +22,4 @@ export default class ImageController {
     }
   }
 }
+

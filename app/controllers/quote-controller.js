@@ -9,13 +9,11 @@ function _drawQuote() {
 export default class QuoteController {
 
   constructor() {
-    _drawQuote()
     store.subscribe("quote", _drawQuote)
     QuoteService.getQuoteAsync()
   }
 
   async getQuoteAsync() {
-    debugger
     try {
       await QuoteService.getQuoteAsync()
     } catch (error) {

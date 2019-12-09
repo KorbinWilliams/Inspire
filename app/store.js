@@ -7,6 +7,7 @@ import Weather from "./models/weather.js";
 let _state = {
   image: {},
   /**@type {Quote} */
+  // @ts-ignore
   quote: {},
   /**@type {Todo[]}*/
   todos: [],

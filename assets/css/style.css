@@ -1,7 +1,10 @@
 body,
 html {
-  height: max-content;
-  width: max-content;
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #todo-error{
@@ -9,8 +12,6 @@ html {
   font-size: 2em;
 }
 
-#bg-image {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.welcomeheight {
+  height: 10vh;
 }
