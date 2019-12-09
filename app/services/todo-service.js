@@ -10,6 +10,7 @@ class TodoService {
   async getTodos() {
     console.log("Getting the Todo List");
     let res = await todoApi.get();
+    console.log("todoData", res.data)
     //TODO Handle this response from the server
   }
 

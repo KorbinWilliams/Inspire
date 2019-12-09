@@ -42,9 +42,12 @@
 					<!-- quote of the day -->
 				</div>
 				<div class="col-12 col-md-4 d-flex justify-content-right">
-					<h1>Things you probably should've done yesterday</h1>
-					<form onsubmit="">
-						<!-- deleting something from the todo list i assume -->
+					<h3>Things you probably should've done yesterday</h3>
+					<form onsubmit="app.todoController.addTodo(event)">
+						<div class="form-group">
+							<label for="todos">Add item to todo list</label>
+							<input type="text" name="todos" id="addTodo" class="form-control" placeholder="add item form">
+						</div>
 					</form>
 					<div>
 						<ul id="todos">

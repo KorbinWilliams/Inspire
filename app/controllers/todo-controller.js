@@ -11,7 +11,14 @@ function _drawTodos() {
 
 function _drawTodoErrors() {
   // let Errors = template error? 
-  document.querySelector("#todo-error").innerHTML = template
+  // document.querySelector("#todo-error").innerHTML = template
+}
+
+function _drawWelcomePerson() {
+
+  // use baseURL to designate username?
+  // baseURL: "https://bcw-sandbox.herokuapp.com/api/KorbinWilliams/todos/",
+  // got from todo-service
 }
 export default class TodoController {
   constructor() {

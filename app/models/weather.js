@@ -8,6 +8,7 @@ export default class Weather {
     //TODO You should probably convert the temperature data to either F or C
     //      check out the other data that comes back and see if there is anything you want to try
   }
+
   get weatherTemplate() {
     return `
       

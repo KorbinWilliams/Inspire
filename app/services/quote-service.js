@@ -13,9 +13,8 @@ class QuoteService {
 
   async getQuoteAsync() {
     let res = await _quoteApi.get("")
-    console.log(res)
+    console.log("quoteData", res)
   }
-
 }
 
 const quoteService = new QuoteService();
