@@ -10,7 +10,7 @@ export default class ImageController {
   constructor() {
     store.subscribe("image", _drawImage)
     _drawImage()
-    this.setImageAsync
+    ImageService.setImageAsync()
   }
 
   // change image function maybe stretch goal

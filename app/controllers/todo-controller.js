@@ -2,8 +2,17 @@ import TodoService from "../services/todo-service.js";
 import store from "../store.js";
 
 //TODO Create the render function
-function _drawTodos() { }
+function _drawTodos() {
+  let Todos = store.State.todos
+  let template = ""
+  Todos.forEach(t => template += t.TodoItemTemplate)
+  document.querySelector("#todos").innerHTML = template
+}
 
+function _drawTodoErrors() {
+  // let Errors = template error? 
+  document.querySelector("#todo-error").innerHTML = template
+}
 export default class TodoController {
   constructor() {
     store.subscribe("todos", _drawTodos)
