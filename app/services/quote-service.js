@@ -1,3 +1,5 @@
+import store from "../store.js";
+
 // @ts-ignore
 let _quoteApi = axios.create({
   baseURL: "//bcw-sandbox.herokuapp.com/api/quotes",
@@ -14,6 +16,8 @@ class QuoteService {
   async getQuoteAsync() {
     let res = await _quoteApi.get("")
     console.log("quoteData", res)
+    store.commit("quote", res.data.quote)
+    console.log(store.State.quote)
   }
 }
 

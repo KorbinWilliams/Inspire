@@ -2,11 +2,8 @@ import QuoteService from "../services/quote-service.js";
 import store from "../store.js";
 
 function _drawQuote() {
-  // let Quote = store.State.quote
-  // let template = ""
-  // Quote.forEach(q => template += q.quoteTemplate)
-  // document.querySelector("#").innerHTML = template
-  // NOTE that didn't have intellisense for q.quoteTemplate
+  let Quote = store.State.quote
+  document.querySelector("#quote").innerHTML = Quote.quoteTemplate;
 }
 
 export default class QuoteController {
@@ -18,6 +15,7 @@ export default class QuoteController {
   }
 
   async getQuoteAsync() {
+    debugger
     try {
       await QuoteService.getQuoteAsync()
     } catch (error) {

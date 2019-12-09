@@ -6,6 +6,7 @@ import Weather from "./models/weather.js";
 
 let _state = {
   image: {},
+  /**@type {Quote} */
   quote: {},
   /**@type {Todo[]}*/
   todos: [],
