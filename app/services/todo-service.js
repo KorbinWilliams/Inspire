@@ -10,12 +10,14 @@ class TodoService {
   async getTodos() {
     console.log("Getting the Todo List");
     let res = await todoApi.get();
-    console.log("todoData", res.data)
-    //TODO Handle this response from the server
+    console.log("todoData", res.data.data)
+    store.commit("todos", res.data.data)
   }
 
   async addTodoAsync(todo) {
     let res = await todoApi.post("", todo);
+    console.log("res from service", res)
+    await this.getTodos()
     //TODO Handle this response from the server (hint: what data comes back, do you want this?)
   }
 

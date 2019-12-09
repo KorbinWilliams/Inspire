@@ -8,11 +8,5 @@ export default class Image {
     this.source_id = data.source_id || ""
     this.url = data.url
   }
-
-  get imageTemplate() {
-    return `
-    <div class="bg-image"></div>
-    `
-  }
 }
 

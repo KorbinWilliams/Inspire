@@ -1,14 +1,15 @@
 export default class Todo {
 
-  constructor(event) {
-    // this.error = data.
-    // TODO Gotta get data from an error to figure out how to format I think.
-    this.name = event.name
+  constructor(data) {
+    this.description = data.description
+    this._id = data.id || data._id
+    this.completed = true || false
+    this.user = data.user
   }
 
   get TodoItemTemplate() {
     return `
-    <li>${this.name}</li>
+    <li>${this.description}</li>
     `
   }
 
