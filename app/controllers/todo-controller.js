@@ -2,11 +2,11 @@ import TodoService from "../services/todo-service.js";
 import store from "../store.js";
 
 //TODO Create the render function
-function _drawTodos() {}
+function _drawTodos() { }
 
 export default class TodoController {
   constructor() {
-    //TODO Remember to register your subscribers
+    store.subscribe("todos", _drawTodos)
     TodoService.getTodos();
   }
 

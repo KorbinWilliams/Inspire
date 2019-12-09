@@ -1,7 +1,7 @@
 import store from "../store.js";
 
 // @ts-ignore
-const todoApi = axios.create({
+let todoApi = axios.create({
   baseURL: "https://bcw-sandbox.herokuapp.com/api/YOURNAME/todos/",
   timeout: 8000
 });

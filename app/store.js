@@ -1,10 +1,19 @@
+import Image from "./models/image.js"
+import Todo from "./models/todo.js"
+import Quote from "./models/quote.js"
 import Weather from "./models/weather.js";
 
+
 let _state = {
+  /**@type {Image} */
+  image: {},
+  /**@type {Todo[]}*/
+  todos: [],
+  /**@type {Quote}*/
+  quote: {},
+  // I read the error message and still don't get what's wrong with this lol. Probably just need to flesh out quote template with data types.
   /**@type {Weather} */
-  weather: new Weather({ name: "loading", main: { temp: 0.0 } }), //temporary fake data
-  /**@type {any[]}*/
-  todos: [] //TODO change 'any' to your todo model
+  weather: new Weather({ name: "loading", main: { temp: 0.0 } }) //temporary fake data
 };
 
 /** Collection of listeners to be called based on keyed state changes
@@ -12,6 +21,7 @@ let _state = {
  */
 let _listeners = {
   weather: []
+
 };
 
 /**

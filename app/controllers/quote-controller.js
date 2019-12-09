@@ -1,5 +1,16 @@
 import QuoteService from "../services/quote-service.js";
 
-//TODO Create methods for constructor, and rendering the quote to the page
-//      (be sure to review the HTML as an element already was put there for you)
-export default class QuoteController {}
+function _drawQuote() {
+
+}
+
+export default class QuoteController {
+
+  constructor() {
+    _drawQuote()
+    // probably don't need a subscribe here only 1 image per day no change in data
+  }
+
+
+  // only really need a draw function and a simple axios get, do I really even need an async function to contact service (probably do if not just for errors) 
+}
