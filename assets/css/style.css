@@ -15,3 +15,12 @@ html {
 .welcomeheight {
   height: 10vh;
 }
+
+.mainheight {
+  height: 60vh;
+}
+
+.bgtext {
+  color: white;
+  text-shadow: 2px 2px black;
+}

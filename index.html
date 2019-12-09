@@ -18,13 +18,13 @@
 			<div class="col-8 col-md-10" id="WelcomePerson">
 				<!-- "Welcome Person" -->
 			</div>
-			<div class="col-4 col-md-2" id="weather">
+			<div class="col-4 col-md-2 bgtext" id="weather">
 				<!-- Your Weather Template -->
 			</div>
 		</div>
 	</header>
 
-	<main class="container-fluid">
+	<main class="container-fluid mainheight">
 		<div class="row">
 			<div class="col-12 d-flex justify-content center">
 				<!-- TODO probably easier to have name saved in local storage display at top -->
@@ -36,31 +36,35 @@
 
 	<footer class="container-fluid">
 		<div class="row">
-			<div class="col-12 col-md-8" id="quote">
+			<div class="col-12 col-md-8  bgtext" id="quote">
 				<!-- quote of the day -->
 			</div>
-			<div class="col-12 col-md-4 d-flex justify-content-right">
+			<div class="col-12 col-md-4 d-flex justify-content-right bgtext">
 				<h5>Things you probably should've done yesterday</h5>
 			</div>
 		</div>
 		<div class="row">
-			<ul id="todos">
-				<!-- li, foreach, etc. -->
-			</ul>
-			<p id="todo-error">
-				<!-- model: <p> with error -->
-			</p>
-			<form onsubmit="app.todoController.addTodo(event)">
-				<div class="form-group">
-					<label for="todos">Add item to todo list</label>
-					<input type="text" name="todos" id="addTodo" class="form-control" placeholder="add item form">
-				</div>
-			</form>
+			<div class="col-12 col-md-6 bgtext">
+				<ul id="todos">
+					<!-- li, foreach, etc. -->
+				</ul>
+				<p id="todo-error">
+					<!-- model: <p> with error -->
+				</p>
+			</div>
+			<div class="col-md-2">
+			</div>
+			<div class="col-12 col-md-4 bgtext">
+				<form onsubmit="app.todoController.addTodo(event)">
+					<div class="form-group">
+						<label for="todos">Add item to todo list</label>
+						<input type="text" name="todos" id="addTodo" class="form-control" placeholder="add item form">
+					</div>
+				</form>
+			</div>
 		</div>
-
-
-
 	</footer>
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
