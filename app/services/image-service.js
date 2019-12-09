@@ -5,7 +5,12 @@ const imgApi = axios.create({
 });
 
 //TODO create methods to retrieve data trigger the update window when it is complete
-class ImageService {}
+class ImageService {
+  async setImageAsync() {
+    let res = await imgApi.get("")
+    console.log("imageData", res.data)
+  }
+}
 
 const imageService = new ImageService();
 export default imageService;

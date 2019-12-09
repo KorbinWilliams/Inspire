@@ -11,55 +11,59 @@
 	<title>Inspire</title>
 </head>
 
-<body id="bg-image">
-	<header class="container-fluid">
-		<div class="row">
-			<div class="col-8 col-md-10" id="WelcomePerson">
-				<!-- "Welcome Person" -->
-			</div>
-			<div class="col-4 col-md-2" id="weather">
-				<!-- Your Weather Template -->
-			</div>
-		</div>
-	</header>
+<div id="bg-image">
+	<!-- add div with template that has class of bg-image -->
 
-	<main class="container-fluid">
-		<div class="row">
-			<div class="col-12 d-flex justify-content center">
-				<!-- TODO probably easier to have name saved in local storage display at top -->
-				<!-- STUB  make form for person's name 
+	<body>
+		<header class="container-fluid">
+			<div class="row">
+				<div class="col-8 col-md-10" id="WelcomePerson">
+					<!-- "Welcome Person" -->
+				</div>
+				<div class="col-4 col-md-2" id="weather">
+					<!-- Your Weather Template -->
+				</div>
+			</div>
+		</header>
+
+		<main class="container-fluid">
+			<div class="row">
+				<div class="col-12 d-flex justify-content center">
+					<!-- TODO probably easier to have name saved in local storage display at top -->
+					<!-- STUB  make form for person's name 
 					if statement inside model to change from form to person's name, get/post-->
-			</div>
-		</div>
-	</main>
-
-	<footer class="container-fluid">
-		<div class="row">
-			<div class="col-12 col-md-8" id="quote">
-				<!-- quote of the day -->
-			</div>
-			<div class="col-12 col-md-4 d-flex justify-content-right">
-				<h1>Things you probably should've done yesterday</h1>
-				<form onsubmit="">
-					<!-- deleting something from the todo list i assume -->
-				</form>
-				<div>
-					<ul id="todos">
-						<!-- li, foreach, etc. -->
-					</ul>
-				</div>
-				<div id="todo-error">
-					<!-- model: <p> with error -->
 				</div>
 			</div>
-		</div>
+		</main>
 
-	</footer>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
-	<script type="module" src="app/main.js"></script>
-</body>
+		<footer class="container-fluid">
+			<div class="row">
+				<div class="col-12 col-md-8" id="quote">
+					<!-- quote of the day -->
+				</div>
+				<div class="col-12 col-md-4 d-flex justify-content-right">
+					<h1>Things you probably should've done yesterday</h1>
+					<form onsubmit="">
+						<!-- deleting something from the todo list i assume -->
+					</form>
+					<div>
+						<ul id="todos">
+							<!-- li, foreach, etc. -->
+						</ul>
+					</div>
+					<div id="todo-error">
+						<!-- model: <p> with error -->
+					</div>
+				</div>
+			</div>
+
+		</footer>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+		<script type="module" src="app/main.js"></script>
+	</body>
+</div>
 
 </html>

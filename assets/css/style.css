@@ -1,4 +1,16 @@
+body,
+html {
+  height: max-content;
+  width: max-content;
+}
+
 #todo-error{
   color: red;
   font-size: 2em;
+}
+
+#bg-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

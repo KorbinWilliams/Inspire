@@ -4,5 +4,10 @@ export default class Image {
 
   }
 
-  // probably don't need a template for this one try putting in controller draw function
+  get imageTemplate() {
+    return `
+    <div class="bg-image"></div>
+    `
+  }
 }
+
