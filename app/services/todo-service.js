@@ -1,4 +1,5 @@
 import store from "../store.js";
+import Todo from "../models/todo.js"
 
 // @ts-ignore
 let todoApi = axios.create({
@@ -11,32 +12,36 @@ class TodoService {
     console.log("Getting the Todo List");
     let res = await todoApi.get();
     console.log("todoData", res.data.data)
-    store.commit("todos", res.data.data)
+    store.commit("todos", res.data.data.map(todos => new Todo(todos)))
+    console.log("store todos", store.State.todos)
   }
 
   async addTodoAsync(todo) {
     let res = await todoApi.post("", todo);
     console.log("res from service", res)
     await this.getTodos()
-    //TODO Handle this response from the server (hint: what data comes back, do you want this?)
   }
 
   async toggleTodoStatusAsync(todoId) {
     let todo = store.State.todos.find(todo => todo._id == todoId);
-    //TODO Make sure that you found a todo,
-    //		and if you did find one
-    //		change its completed status to whatever it is not (ex: false => true or true => false)
+    if (todo.completed == true) {
+      todo.completed = false;
+    } else if (todo.completed == false) {
+      todo.completed = true;
+    }
 
     let res = await todoApi.put(todoId, todo);
-    //TODO do you care about this data? or should you go get something else?
   }
 
   async removeTodoAsync(todoId) {
-    //TODO Work through this one on your own
-    //		what is the request type
-    //		once the response comes back, what do you need to insure happens?
+    let todo = store.State.todos
+    todo.find(t => t.id == todoId)
+    todoApi.delete(`/${todoId}`, todo).then(res => {
+      this.getTodos();
+    });
   }
 }
 
-const todoService = new TodoService();
+
+let todoService = new TodoService();
 export default todoService;

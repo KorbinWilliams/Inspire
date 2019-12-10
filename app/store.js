@@ -9,10 +9,10 @@ let _state = {
   /**@type {Quote} */
   // @ts-ignore
   quote: {},
-  /**@type {Todo[]}*/
   todos: [],
-  /**@type {Weather} */
-  weather: new Weather({ name: "loading", main: { temp: 0.0 } }) //temporary fake data
+  todoList: [],
+  // try messing with that
+  weather: {}
 };
 
 /** Collection of listeners to be called based on keyed state changes
